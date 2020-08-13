@@ -24,6 +24,7 @@ Book 4 - Extensions
 
 Include Basic Screen Effects by Emily Short.
 Include Small Kindnesses by Aaron Reed.
+Include Exit Lister by Eric Eve.
 
 Volume 2 - Mechanics
 
@@ -106,7 +107,52 @@ To say brush-off of (n - a thing):
 Rule for writing a paragraph about a flimsy (called xx):
 	now xx is mentioned.
 	
-Book 5 - Relations
+Book 6 - Actions
+
+Part 1 - Standard Actions
+
+Chapter 1 - General Actions the player can perform
+
+instead of going nowhere:
+	say "As much as you want to shirk your responsibility, you promised to get those hornets out of the tree."
+
+Chapter 2 - Synonyms
+
+Understand "climb [direction]" as going.
+understand "collect [something]" as taking.
+understand "collect [something] off/from [something]" as removing it from.
+understand "jump up" as jumping.
+understand "leap" as jumping.
+
+Chapter 3 - Listening
+
+instead of listening:
+	say "You hear nothing.";
+		
+
+Chapter 4 - Scoring
+
+carry out requesting the score:
+	if score is greater than 0:
+		say "You look into your basket and count [score] eggs.";
+	otherwise:
+		say "You haven't found any eggs yet.";
+	stop the action.
+	
+Chapter 5 - Counting
+
+Counting is an action applying to one visible thing.  Understand "count [something]" as counting.
+
+Check counting:
+	if the noun is eggs:
+		say "You watch the hornets for a bit as they swarm in and out of the nest.  It's hard to be sure, but you think there are 69,105 hornets." instead.
+		
+Carry out counting:
+	say "Sure....maybe later."
+	
+Understand "count blessings" or "count your blessings" or "count my blessings" as a mistake("Well for one you haven't been stung yet...")
+
+Book 7 - Relations
 
 Part 1 - Underlying
 
@@ -124,7 +170,7 @@ Understand the commands "shove" and "conceal" and "stick" as "hide".
 Carry out hiding it under:
 	say "You put [the noun] out of sight beneath [the second noun]."
 
-Book 6 - Actions
+Book 8 - Actions
 
 Part 1 - Out of world
 
@@ -150,6 +196,17 @@ Carry out requesting the license:
 	say the license.
 	
 
+Part 2 - To Say
+
+To say other-side-of-door:
+	let the other-side be "[other side of the noun]" in lower case;
+	say the other-side.
+
+	
+Book 9 - Rules
+
+Before printing a locale paragraph about a supporter (called item): 
+	now every thing on the item is mentioned.
 
 Volume 3 - World
 
@@ -158,6 +215,8 @@ Book 1 - Startup
 After printing the banner text, say "Copyright © 2020, Jason Lautzenheiser."
 
 When play begins, say "You finally got to grandma's house.  You've anticipated this day for months.  Grandma and Grandpa put on the best Easter egg hunt in history and you're determined to find the most eggs this year."
+
+The player is in Kitchen.
 
 Book 2 - Characters
 
@@ -209,44 +268,57 @@ There is a region called OutsideHouse.
 
 Book 4 - Rooms
 
-Part 1 - Barn
+Part 1 - Kitchen
 
-There is a room called Barn.
+There is a room called kitchen.  It is in House.  The description is "You are standing in the kitchen of your grandparents house.  A [kitchen-table]  holds [food] that smells great.  An open door leads east to the back porch.  To the south is the living room and a hallway stretches to the west."
 
-Barn Door is a door. Barn Door is west of Barn and east of WestOfBarn.  
-Barn Door is closed and openable.
-Barn Door is unlocked and not lockable.
-The description of Barn Door is "".
+The food is a flimsy.  The food is on the kitchen-table.  The action-refusal is "Grandma said you had to wait until later to eat any food.  Easter egg hunt comes first."  The initial appearance is "The food looks delicious."
 
+South of kitchen is living-room.
 
+West of kitchen is Hallway.
 
+Chapter 2 - Back Door
 
-Part 2 - Kitchen
+The back-door is a door. back-door is east of kitchen and west of back-porch.  The printed name is "sliding door".   
+Understand "sliding" or "sliding door" or "kitchen door" or "back door" as side-door.  Understand "door" as back-door when location is kitchen or location is back-porch.
 
-There is a room called Kitchen. "This is a description of the kitchen". It is in House.
+back-door is open and not openable.
+back-door is unlocked and not lockable.
 
-The player is in Kitchen.
-The kitchenTable is a thing in Kitchen.  The description of kitchenTable is "A large wooden table."
+The description of back-door is "The sliding screen door to the [direction of the noun from the location] leads to the [other-side-of-door].."
 
-South of Kitchen is Living Room.
-Back Door is a door. Back Door is east of Kitchen and west of Back Porch.  
-Back Door is open and not openable.
-Back Door is unlocked and not lockable.
-The description of Back Door is "".
+Instead of closing the back-door:
+	if grandma is in the location:
+		say "Grandma looks at you and just shakes her head no.  You decide not to slide the door shut.";
+	otherwise:
+		say "Grandma appears out of nowhere and gives you a look.  You decide not to slide the door shut.";
+		now grandma is in the location.
 
-West of Kitchen is Hallway.
+Chapter 1 - Kitchen Table
 
-Part 3 -  Room
+The kitchen-table is a supporter in Kitchen.  The kitchen-table is scenery.  The printed name is "kitchen table". The description is "A large wooden table."
 
-There is a room called Living Room. It is in House.
-
-Side Door is a door. Side Door is south of Living Room and north of Patio.  
-Side Door is closed and openable.
-Side Door is unlocked and not lockable.
-The description of Side Door is "".
+Understand "table" or "kitchen table" as kitchen-table.
 
 
-Part 4  - Hallway
+
+Part 2 -  Living Room
+
+living-room is a room in house.  The printed name is "Living Room".  The description of living-room is "The living room is where grandma and grandpa spend most of their time watching the large TV in the corner.  A couch, a rocking chair and a recliner sit along the walls and a bookshelf sits along the wall just inside the doorway from the kitchen."
+
+Chapter 1 - Side Door
+
+The side-door is a door. side-door is south of living-room and north of Patio.  The printed name of side-door is "living room door".  Understand "french" or "french door" or "living room door" as side-door.  
+
+Understand "door" as side-door when location is living-room or the location is patio.
+
+side-door is closed and openable.
+side-door is unlocked and not lockable.
+The description of side-door is "The french door to the [direction of the noun from the location] leads to the [other-side-of-door].".
+
+
+Part 3  - Hallway
 
 There is a room called Hallway. It is in House.
 
@@ -257,7 +329,7 @@ The description of Front Door is "".
 
 
 
-Part 5 - Yard
+Part 4 - Front Yard
 
 There is a room called Front Yard. It is in FrontYard.
 
@@ -266,7 +338,7 @@ South of Front Yard is South Front Yard.
 East of Front Yard is Front Porch.
 West of Front Yard is under-the-walnut-tree.
 
-Part 6 - Walnut Tree
+Part 5 - Walnut Tree
 
 There is a room called under-the-walnut-tree. The printed name is "Under the Walnut Tree". It is in FrontYard.
 The description of under-the-walnut-tree is "You are standing under a majestic walnut tree that is older than any person here...including grandpa."
@@ -274,7 +346,7 @@ The description of under-the-walnut-tree is "You are standing under a majestic w
 West of under-the-walnut-tree is Road.
 
 
-Part 7 - Grove
+Part 6 - Pine Grove
 
 There is a room called Pine Grove. It is in FrontYard.
 
@@ -285,7 +357,7 @@ East of Pine Grove is Far Side Yard.
 
 [Instead of going north from Pine Grove, block conditional exits.]
 
-Part 8 - Front Yard
+Part 7 - South Front Yard
 
 There is a room called South Front Yard. It is in FrontYard.
 
@@ -295,11 +367,7 @@ A Tire Swing is a thing in South Front Yard.
 East of South Front Yard is Driveway.
 West of South Front Yard is Road.
 
-[Instead of going west from South Front Yard, block conditional exits.]
-
-
-
-Part 9 - Side Yard
+Part 8 - Side Yard
 
 There is a room called Side Yard. It is in SideYard.
 
@@ -311,13 +379,21 @@ East of Side Yard is Garden.
 West of Side Yard is BasketBall Court.
 Northwest of Side Yard is Patio.
 
-[Instead of going south from Side Yard, block conditional exits.]
+Part 9 - Barn
+
+There is a room called Barn.
+
+Barn Door is a door. Barn Door is west of Barn and east of WestOfBarn.  
+Barn Door is closed and openable.
+Barn Door is unlocked and not lockable.
+The description of Barn Door is "".
+
 
 Part 10 - West of Barn
 
 There is a room called WestOfBarn. It is in SideYard.
 
-North of WestOfBarn is Back Porch.
+North of WestOfBarn is back-porch.
 West of WestOfBarn is Patio.
 Northeast of WestOfBarn is BehindPool.
 
@@ -329,8 +405,6 @@ North of Far Side Yard is Property Line.
 South of Far Side Yard is Strawberry Patch.
 East of Far Side Yard is East Side Yard.
 
-[Instead of going north from Far Side Yard, block conditional exits.]
-
 Part 12 - East Side Yard
 
 There is a room called East Side Yard. It is in SideYard.
@@ -339,8 +413,6 @@ North of East Side Yard is Property Line.
 South of East Side Yard is BehindPool.
 East of East Side Yard is Pine Forest.
 
-[Instead of going north from East Side Yard, block conditional exits.]
-
 Part 13 - Pine Forest
 
 There is a room called Pine Forest. It is in SideYard.
@@ -348,9 +420,6 @@ There is a room called Pine Forest. It is in SideYard.
 North of Pine Forest is Property Line.
 East of Pine Forest is Property Line.
 Southwest of Pine Forest is BehindPool.
-
-[Instead of going north from Pine Forest, block conditional exits.
-Instead of going east from Pine Forest, block conditional exits.]
 
 Part 14 - Strawberry Patch
 
@@ -365,9 +434,6 @@ North of Garden is BehindBarn.
 South of Garden is Road.
 East of Garden is Property Line.
 
-[Instead of going south from Garden, block conditional exits.
-Instead of going east from Garden, block conditional exits.]
-
 Part 16  - Behind Barn
 
 There is a room called BehindBarn. It is in BackYard.
@@ -377,8 +443,6 @@ A Farm Equipment is a thing in BehindBarn.
 North of BehindBarn is BehindPool.
 East of BehindBarn is Property Line.
 
-[Instead of going east from BehindBarn, block conditional exits.]
-
 Part 17  - Behind Pool
 
 There is a room called BehindPool. It is in BackYard.
@@ -386,15 +450,16 @@ There is a room called BehindPool. It is in BackYard.
 East of BehindPool is Property Line.
 West of BehindPool is PoolArea.
 
-[Instead of going east from BehindPool, block conditional exits.]
-
 Part 18  - Back Porch
 
-There is a room called Back Porch. It is in OutsideHouse.
+There is a room called back-porch. It is in OutsideHouse.  The printed name of back-porch is "Back Porch".
 
-A Lawn Chair is a thing in Back Porch.
+North of back-porch is PoolArea.
 
-North of Back Porch is PoolArea.
+Chapter 1 - Lawn Chair
+
+The lawn-chair is a fixed in place thing in back-porch.  The printed name is "lawn chair".
+
 
 Part 19 - Front Porch
 
@@ -431,8 +496,6 @@ There is a room called Driveway. It is in OutsideHouse.
 South of Driveway is Road.
 East of Driveway is BasketBall Court.
 
-[Instead of going south from Driveway, block conditional exits.]
-
 Part 24 - Basketball Court
 
 There is a room called BasketBall Court. It is in OutsideHouse.
@@ -442,13 +505,9 @@ A Hoop is a thing in BasketBall Court.
 
 South of BasketBall Court is Road.
 
-[Instead of going south from BasketBall Court, block conditional exits.]
-
 Part 25 - Road
 
 There is a room called Road. It is in RoadRegion.
-
-
 
 Part 26 - Property Line
 
@@ -467,4 +526,16 @@ Book 6 - Things
 
 Part 1 - Eggs
 
-An egg is a kind of thing.  50 eggs are in Egg Limbo.
+[An egg is a kind of thing.  50 eggs are in Egg Limbo.]
+
+Some eggs are a thing.  The description of eggs is "Plastic eggs of various pastel colors."
+
+Part 2 - Easter Basket
+
+An easter-basket is a open container.  The printed name is "Easter basket".  The description is "It's a pastel green basket that grandma gave you your first Easter hunting eggs.  You may be a bit old now, but you still like it."
+
+The easter-basket  is on the kitchen-table
+
+Understand "basket" or "easter basket" as easter-basket.
+
+
