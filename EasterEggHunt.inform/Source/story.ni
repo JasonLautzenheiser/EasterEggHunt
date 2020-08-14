@@ -37,7 +37,7 @@ Use scoring.
 
 Book 2 - Scoring
 
-The maximum score is 120.   
+The maximum score is 100.   
 
 Book 3 - Status Line
 
@@ -220,6 +220,17 @@ The player is in Kitchen.
 
 Book 2 - Characters
 
+Before listing nondescript items:
+	if a door (called listed-door) is marked for listing:
+		now the listed-door is not marked for listing;
+	if grandma is marked for listing:
+		now grandma is not marked for listing;
+		say "Grandma stands quietly by waiting to see if she can get something for someone.";
+	if grandpa is marked for listing:
+		now grandpa is not marked for listing;
+		say "Grandpa fidgets as he looks for something to fix."
+
+
 Part 1 - Player Character
 
 The description of the player is "You're 13, that odd age where you're not quite a kid but not quite a grown-up."
@@ -270,7 +281,7 @@ Book 4 - Rooms
 
 Part 1 - Kitchen
 
-There is a room called kitchen.  It is in House.  The description is "You are standing in the kitchen of your grandparents house.  A [kitchen-table]  holds [food] that smells great.  An open door leads east to the back porch.  To the south is the living room and a hallway stretches to the west."
+There is a room called kitchen.  It is in House.  The description is "You are standing in the kitchen of your grandparents house.  A [kitchen-table]  holds [food] that smells great.  An open [back-door] leads east to the back porch.  To the south is the living room and a hallway stretches to the west."
 
 The food is a flimsy.  The food is on the kitchen-table.  The action-refusal is "Grandma said you had to wait until later to eat any food.  Easter egg hunt comes first."  The initial appearance is "The food looks delicious."
 
@@ -305,11 +316,11 @@ Understand "table" or "kitchen table" as kitchen-table.
 
 Part 2 -  Living Room
 
-living-room is a room in house.  The printed name is "Living Room".  The description of living-room is "The living room is where grandma and grandpa spend most of their time watching the large TV in the corner.  A couch, a rocking chair and a recliner sit along the walls and a bookshelf sits along the wall just inside the doorway from the kitchen."
+living-room is a room in house.  The printed name is "Living Room".  The description of living-room is "The living room is where grandma and grandpa spend most of their time watching the [large-tv] in the corner.  A [couch], a [rocking chair] and a [recliner] sit along the walls and a [bookcase] sits along the wall just inside the doorway from the kitchen.  The [side-door] leads south to the patio."
 
 Chapter 1 - Side Door
 
-The side-door is a door. side-door is south of living-room and north of Patio.  The printed name of side-door is "living room door".  Understand "french" or "french door" or "living room door" as side-door.  
+The side-door is a door. side-door is south of living-room and north of Patio.  The printed name of side-door is "patio door".  Understand "french" or "french door" or "living room door" as side-door.  
 
 Understand "door" as side-door when location is living-room or the location is patio.
 
@@ -317,6 +328,25 @@ side-door is closed and openable.
 side-door is unlocked and not lockable.
 The description of side-door is "The french door to the [direction of the noun from the location] leads to the [other-side-of-door].".
 
+Chapter 2 - Large TV
+
+The large-tv is a fixed in place thing in the living-room.  The printed name is "large TV".   The description of large-tv is "The large screen TV sits on a small pedestal which underneath is a bunch of movies that grandma will play while she is watching us."  Understand "tv" or "large tv" or "television" or "large television" as large-tv when location is living-room.
+
+Chapter 3 - Couch
+
+The couch is a fixed in place supporter in the living-room.  The description is "The couch is soft and squashy."
+
+Chapter 4 - Rocking chair
+
+The rocking chair is a fixed in place supporter in the living-room.  The description is "The wooden rocking chair sits next by itself facing the TV."
+
+Chapter 5 - Recliner
+
+The recliner is a fixed in place supporter in the living-room.  The description is "The recliner is soft and you love to sit in it and rock."
+
+Chapter 6 - Bookshelf
+
+The bookcase is a fixed in place container in the living-room.  The description is "The three shelf bookcase sits along the wall and is filled with books."  Understand "bookshelf" or "book shelf" or "book case" as bookcase when location is living-room.
 
 Part 3  - Hallway
 
