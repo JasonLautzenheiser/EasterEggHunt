@@ -350,12 +350,20 @@ The bookcase is a fixed in place container in the living-room.  The description 
 
 Part 3  - Hallway
 
-There is a room called Hallway. It is in House.
+The hallway is a room in house.  "This is a hallway leading to the [front-door].  There is a [bench] sitting along one side."
 
-Front Door is a door. Front Door is west of Hallway and east of Front Porch.  
-Front Door is closed and openable.
-Front Door is locked and not lockable.
-The description of Front Door is "".
+Chapter 2 - Bench
+
+The bench is a fixed in place supporter in the hallway.  The description is "The simple wooden bench sits along the wall."
+
+Chapter 1 - Front Door
+
+The front-door is a door. front-door is west of Hallway and east of front-porch.   The printed name is "front door".  Understand "front door" and "door" as front-door when the location is hallway or the location is front-porch.
+
+The front-door is closed and openable.
+
+The description of front-door is "The [front-door] to the [direction of the noun from the location] leads to the [other-side-of-door].".
+
 
 
 
@@ -365,7 +373,7 @@ There is a room called Front Yard. It is in FrontYard.
 
 North of Front Yard is Pine Grove.
 South of Front Yard is South Front Yard.
-East of Front Yard is Front Porch.
+East of Front Yard is front-porch.
 West of Front Yard is under-the-walnut-tree.
 
 Part 5 - Walnut Tree
@@ -493,10 +501,10 @@ The lawn-chair is a fixed in place thing in back-porch.  The printed name is "la
 
 Part 19 - Front Porch
 
-There is a room called Front Porch. It is in OutsideHouse.
+There is a room called front-porch. It is in OutsideHouse. The printed name is "front porch".  Understand "front porch" or "porch" as front-porch when the location is front-porch.
 
-A Porch Swing is a thing in Front Porch.
-A Doorbell is a thing in Front Porch.
+A Porch Swing is a thing in front-porch.
+A Doorbell is a thing in front-porch.
 
 Part 20 - Patio
 
